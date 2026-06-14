@@ -3,11 +3,11 @@
 var xmark = document.getElementById("close");
 var popup = document.getElementById("popup");
 
-//Wishlist Functionality//
-
 xmark.addEventListener("click", function () {
   popup.style.display = "none";
 });
+
+//Wishlist Functionality//
 
 var wishlist = document.querySelectorAll(".wishlist");
 

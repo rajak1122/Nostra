@@ -3,6 +3,11 @@
 var xmark = document.getElementById("close");
 var popup = document.getElementById("popup");
 
+xmark.addEventListener("click", function () {
+  popup.style.display = "none";
+});
+
+
 //Menubar Functionality//
 
 var menubar = document.getElementById("menubar")
