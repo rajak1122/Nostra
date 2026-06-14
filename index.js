@@ -1,7 +1,9 @@
-//Wishlist Functionality//
+//Popup Close Functionality//
 
 var xmark = document.getElementById("close");
 var popup = document.getElementById("popup");
+
+//Wishlist Functionality//
 
 xmark.addEventListener("click", function () {
   popup.style.display = "none";

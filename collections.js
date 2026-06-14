@@ -1,3 +1,8 @@
+//Popup Close Functionality//
+
+var xmark = document.getElementById("close");
+var popup = document.getElementById("popup");
+
 //Menubar Functionality//
 
 var menubar = document.getElementById("menubar");
