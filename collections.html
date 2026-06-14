@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections</title>
+  <!--Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
+  <!--Font Awesome CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Tailwind CSS-->
+  <link href="./src/output.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--Popup-->
+  <section class="flex justify-center gap-5 bg-pink-700 items-center md:gap-10" id="popup">
+    <p class="text-center text-white text-xs p-2 md:text-xl">
+      Sign Up and get 20% off on your first order
+    </p>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="size-6 text-white" id="close">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+  </section>
+  <!--Header Section-->
+  <section class="p-3 bg-white items-center sticky top-0 z-30 md:p-5 flex justify-between">
+    <h1 class="text-3xl font-bold">Nostra</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="size-6 cursor-pointer md:hidden" id="menubar">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+
+    <div class="hidden md:flex gap-10 cursor-pointer mr-10">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="#new-arrivals" class="hover:underline">New Arrival</a>
+      <a href="#most-wanted" class="hover:underline">Most Wanted</a>
+      <a class="hover:underline">Collection</a>
+      <a href="contact.html" class="hover:underline">Contact Us</a>
+    </div>
+  </section>
+  <!--Menu Bar-->
+  <section>
+    <div id="sidepopup" class=" bg-pink-400 z-30 top-0 fixed cursor-pointer transition-all duration-700"
+      style="width: 50%; height: 100vh; left: -50%;">
+      <div class="p-3 flex flex-col gap-5 mt-10">
+        <i id="closebtn" class="fa-solid fa-xmark" style="color: rgb(0, 0, 0);"></i>
+        <a href="index.html" class="hover:underline text-center">Home</a>
+        <a href="#new-arrivals" class="hover:underline text-center">New Arrival</a>
+        <a href="#most-wanted" class="hover:underline text-center">Most Wanted</a>
+        <a class="hover:underline text-center">Collection</a>
+        <a href="contact.html" class="hover:underline text-center">Contact Us</a>
+      </div>
+  </section>
+  <!--Collection Section-->
+  <section class="p-3 flex md:p-5 mt-5">
+    <div class="border-r-2 p-3 w-1/4">
+      <h2 class="font-bold text-xl mb-5 md:text-4xl">Filters</h2>
+      <!--Categories-->
+      <div class="mb-8">
+        <h3 class="font-bold text-md mb-3 md:text-3xl">Categories</h3>
+
+        <div class="flex flex-col md:text-2xl">
+          <label>
+            <input type="checkbox" class="md:size-5 category" value="shirt"> Shirt
+          </label>
+
+          <label>
+            <input type="checkbox" class="md:size-5 category" value="t-shirt"> T-shirt
+          </label>
+
+          <label>
+            <input type="checkbox" class="md:size-5 category" value="jeans"> Jeans
+          </label>
+        </div>
+      </div>
+
+      <!--Colors-->
+      <div class="mb-8">
+        <h3 class="font-bold text-md mb-3 md:text-3xl">Colors</h3>
+
+        <div class="flex flex-col md:text-2xl">
+          <label>
+            <input type="checkbox" class="md:size-5 color" value="red"> Red
+          </label>
+
+          <label>
+            <input type="checkbox" class="md:size-5 color" value="blue"> Blue
+          </label>
+
+          <label>
+            <input type="checkbox" class="md:size-5 color" value="white"> White
+          </label>
+
+          <label>
+            <input type="checkbox" class="md:size-5 color" value="green"> Green
+          </label>
+        </div>
+      </div>
+
+      <!--Gender-->
+      <div>
+        <h3 class="font-bold text-md mb-3 md:text-3xl">Gender</h3>
+
+        <div class="flex flex-col md:text-2xl">
+          <label>
+            <input type="checkbox" class="md:size-5 gender" value="men"> Men
+          </label>
+
+          <label>
+            <input type="checkbox" class="md:size-5 gender" value="women"> Women
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="p-3 w-3/4">
+      <!--Search Bar-->
+      <div class="relative">
+        <input id="searchbar" class="border w-full h-8 p-1 md:h-12 rounded-2xl" placeholder="Search here" type="text">
+        <i class="fa-brands fa-sistrix absolute right-5 top-2 text-3xl" style="color: rgb(0, 0, 0);"></i>
+      </div>
+      <div class="grid grid-cols-3 gap-2 p-2">
+        <div class="product" data-category="shirt" data-color="blue" data-gender="men">
+          <img src="./images/most-wanted-1.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">Navy Blue Shirt Men</p>
+          <p class="text-[12px] md:text-2xl">₹599</p>
+        </div>
+        <div class="product" data-category="jeans" data-color="blue" data-gender="women">
+          <img src="./images/most-wanted-10.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">Blue Jeans Women</p>
+          <p class="text-[12px] md:text-2xl">₹999</p>
+        </div>
+        <div class="product" data-category="shirt" data-color="green" data-gender="men">
+          <img src="./images/most-wanted-3.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">Green Shirt Men</p>
+          <p class="text-[12px] md:text-2xl">₹599</p>
+        </div>
+        <div class="product" data-category="shirt" data-color="blue" data-gender="men">
+          <img src="./images/most-wanted-2.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">Blue Shirt Men</p>
+          <p class="text-[12px] md:text-2xl">₹799</p>
+        </div>
+        <div class="product" data-category="t-shirt" data-color="white" data-gender="women">
+          <img src="./images/most-wanted-5.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">White T-hirt Women</p>
+          <p class="text-[12px] md:text-2xl">₹299</p>
+        </div>
+        <div class="product" data-category="jeans" data-color="blue" data-gender="men">
+          <img src="./images/most-wanted-8.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">Blue jeans Men</p>
+          <p class="text-[12px] md:text-2xl">₹1199</p>
+        </div>
+        <div class="product" data-category="jeans" data-color="blue" data-gender="women">
+          <img src="./images/most-wanted-7.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">Blue Jean Women</p>
+          <p class="text-[12px] md:text-2xl">₹899</p>
+        </div>
+        <div class="product" data-category="jeans" data-color="blue" data-gender="men">
+          <img src="./images/most-wanted-9.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">Fade Blue Jean Men</p>
+          <p class="text-[12px] md:text-2xl">₹999</p>
+        </div>
+        <div class="product" data-category="shirt" data-color="blue" data-gender="women">
+          <img src="./images/most-wanted-6.jpeg" alt="shirt-men" class="w-full" />
+          <p class="text-[10px] font-bold md:text-2xl">Blue Shirt Women</p>
+          <p class="text-[12px] md:text-2xl">₹599</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--News Letter Section-->
+  <section class="p-3 text-center md:p-5 mt-5">
+    <h1 class="font-bold text-xl md:text-4xl">Join Our News Letter</h1>
+    <p class="text-xs mt-3 md:text-3xl">
+      Signup for our email newspaper to get exclusive discounts, updates, and
+      more
+    </p>
+    <input type="text" class="border w-[80%] mt-3 h-10" />
+    <p class="text-sm mt-3 bg-pink-950 w-fit text-white p-2 cursor-pointer rounded-sm mx-auto md:text-2xl">
+      Subscribe
+    </p>
+  </section>
+  <!--Footer Section-->
+  <section class="mt-5 bg-pink-950">
+    <div class="text-white p-5 flex flex-col gap-3 md:p-10 md:gap-10">
+      <h1 class="text-xl font-bold md:text-5xl">Nostra</h1>
+      <p class="text-sm md:text-3xl">
+        The Standard chunk of Lorem ipsum used since the 1500s is reprodused
+        below for those interest
+      </p>
+      <div class="gap-10 flex md:text-3xl">
+        <i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255)"></i>
+        <i class="fa-brands fa-twitter" style="color: rgb(255, 255, 255)"></i>
+        <i class="fa-brands fa-facebook" style="color: rgb(255, 255, 255)"></i>
+      </div>
+      <p class="md:text-2xl">@ 2023 Nostra.com</p>
+    </div>
+  </section>
+  <!--JS File-->
+  <script src="./collections.js"></script>
+</body>
+
+</html>
